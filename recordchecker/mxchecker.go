@@ -1,4 +1,4 @@
-package emailverifier
+package recordchecker
 
 import (
 	"context"

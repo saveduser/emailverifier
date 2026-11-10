@@ -1,3 +1,3 @@
-module github.com/saveduser/go_email_verifier
+module github.com/saveduser/emailverifier
 
 go 1.24.6

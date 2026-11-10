@@ -3,14 +3,14 @@ package test_go_pointers
 import (
 	"testing"
 
-	"github.com/jay6909/go-pointers/email"
+	"github.com/saveduser/emailverifier/recordchecker"
 )
 
 func TestEmailVerifier(t *testing.T) {
 	goodEmail := "jayadityagaikwad@gmail.com"
 	badEmail := "jayadityagaikwad@bossbadmail.com"
 
-	result, err := email.Verify(goodEmail)
+	result, err := recordchecker.Verify(goodEmail)
 
 	if err != nil {
 		t.Errorf("Unexpected error: %v", err)

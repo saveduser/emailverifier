@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jay6909/email-verifier.git",
+    "url": "git+https://github.com/saveduser/email-verifier.git",
     "directory": "node"
   },
   "publishConfig": {

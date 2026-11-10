@@ -4,8 +4,8 @@ on:
   push:
     tags:
       - 'v*' # Triggers on any tag starting with 'v' (e.g., v1.0.1)
-  pull_request:
-    branches: [ release ]
+  # pull_request:
+  #   branches: [ release ]
 
 jobs:
   build:
@@ -60,7 +60,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # Replace with your actual new repo name
-          git clone https://x-access-token:${NODE_REPO_PAT}@github.com/jay6909/node_email_verifier node_dest
+          git clone https://x-access-token:${NODE_REPO_PAT}@github.com/saveduser/email-verifier node_dest
           
           cp bins/libverifier-ubuntu-latest/libverifier.so node_dest/
           cp bins/libverifier-windows-latest/libverifier.dll node_dest/
@@ -72,7 +72,7 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "chore: sync binaries from core ${{ github.ref_name }}"
             # 4. EXPLICITLY use the token in the push URL
-            git push https://x-access-token:${NODE_REPO_PAT}@github.com/jay6909/node_email_verifier 
+            git push https://x-access-token:${NODE_REPO_PAT}@github.com/saveduser/email-verifier
           else
             echo "No changes detected, skipping push."
           fi

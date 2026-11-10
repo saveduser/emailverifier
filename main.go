@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"net"
 
-	"github.com/saveduser/emailverifier"
+	"github.com/saveduser/emailverifier/recordchecker"
 )
 
 //export Verify
@@ -16,7 +16,7 @@ func Verify(cEmail *C.char) C.int {
 	// 1. Convert C string to Go string
 	goEmail := C.GoString(cEmail)
 
-	res, err := emailverifier.Verify(goEmail)
+	res, err := recordchecker.Verify(goEmail)
 
 	// 2. Call your existing package logic
 	if err != nil {
@@ -39,7 +39,7 @@ func VerifyBatch(cJsonEmails *C.char) *C.char {
 	var emails []string
 	json.Unmarshal([]byte(C.GoString(cJsonEmails)), &emails)
 
-	results := emailverifier.VerifyBatch(emails)
+	results := recordchecker.VerifyBatch(emails)
 
 	output, _ := json.Marshal(results)
 	return C.CString(string(output))

@@ -1,23 +1,23 @@
-# @anclp/node_email_verifier
+# @anclp/email-verifier
 
-[![NPM Version](https://img.shields.io/npm/v/@anclp/node_email_verifier)](https://www.npmjs.com/package/@anclp/node_email_verifier)
-[![Build Status](https://github.com/jay6909/node_email_verifier/actions/workflows/release.yml/badge.svg)](https://github.com/jay6909/node_email_verifier/actions/workflows/release.yml)
-[![NPM Downloads](https://img.shields.io/npm/dm/@anclp/node_email_verifier)](https://www.npmjs.com/package/@anclp/node_email_verifier)
-[![Publish to npm](https://github.com/jay6909/node_email_verifier/actions/workflows/release.yml/badge.svg)](https://github.com/jay6909/node_email_verifier/actions/workflows/release.yml)
+[![NPM Version](https://img.shields.io/npm/v/@anclp/email-verifier)](https://www.npmjs.com/package/@anclp/email-verifier)
+[![Build Status](https://github.com/saveduser/email-verifier/actions/workflows/release.yml/badge.svg)](https://github.com/saveduser/email-verifier/actions/workflows/release.yml)
+[![NPM Downloads](https://img.shields.io/npm/dm/@anclp/email-verifier)](https://www.npmjs.com/package/@anclp/email-verifier)
+[![Publish to npm](https://github.com/saveduser/email-verifier/actions/workflows/release.yml/badge.svg)](https://github.com/saveduser/email-verifier/actions/workflows/release.yml)
 
-Ultra-fast email verification for Node.js, powered by a Go-compiled native engine. (source: https://github.com/jay6909/go_email_verifier)
+Ultra-fast email verification for Node.js, powered by a Go-compiled native engine. (source: https://github.com/saveduser/go_email_verifier)
 
 ## Installation
 
 ```bash
-npm install @anclp/node_email_verifier
+npm install @anclp/email-verifier
 
 Why this package?
 
 Most Node.js email validators only check syntax with RegEx. This package uses a native Go binary to perform actual DNS lookups, making it significantly more reliable and faster for bulk verification.
 Usage
 javascript
-const { verifyEmail } = require('@anclp/node_email_verifier');
+const { verifyEmail } = require('@anclp/email-verifier');
 
 // Perform a full check (Syntax + MX Records)
 const isValid = verifyEmail("test@example.com");

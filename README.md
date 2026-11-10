@@ -1,4 +1,4 @@
-[![Build cross platform binaries and sync to repos](https://github.com/jay6909/go_email_verifier/actions/workflows/release.yml/badge.svg)](https://github.com/jay6909/go_email_verifier/actions/workflows/release.yml)
+[![Build cross platform binaries and sync to repos](https://github.com/saveduser/go_email_verifier/actions/workflows/release.yml/badge.svg)](https://github.com/saveduser/go_email_verifier/actions/workflows/release.yml)
 
 # Go Email Verifier (Core)
 
@@ -20,7 +20,7 @@ Go's networking stack and concurrency allow us to perform DNS (MX record) lookup
 
 ## 📦 Official Wrappers
 Use these libraries to integrate the engine into your project:
-- **Node.js**: [jay6909/node_email_verifier](https://github.com)
+- **Node.js**: [saveduser/email-verifier](https://github.com)
 - **Python**: *(Coming Soon)*
 - **PHP**: *(Coming Soon)*
 
